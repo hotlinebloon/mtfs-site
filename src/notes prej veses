@@ -1,0 +1,36 @@
+Home Page
+    E kom ndrru dizajni i header-it
+    E rrita rezolucioni i logos për ma shumë qartësi
+
+Mission Section
+    E kom hek overlay black and white që po dokke jo mirë vizualisht
+
+Projects Section
+    E shtova projekti CTRL+HER Global
+    E bona layout-i në 2x2 grid
+    I shtova përshkrimet e projekteve(edesa duhet me ii bo reqrite)
+
+Project Styling
+    E ndava CSS për:
+        Project Page
+        Project Preview
+
+Sponsors Section
+    E kom shtu ni background gradient që me u pa ma mirë logo e LinkPlus
+    I heka marginat sipër dhe poshtë për me e bo ma kompakt seksionin
+    Edhe kom lujt me madhesi te cards pak se su dokke mire
+
+Staff Page
+    I kom shtu fotot
+    edhe duhet me fol per me shti altinen si staf bro se 14 vjet i ka 
+
+Te pergjithshme
+    Do files qe nuk ishin perdor kurr i bona import ne destinated files
+    U vërejt që shumë stile kanë qenë të dyfishuara në:
+        editorial-home
+        sections
+    I kom bo rewrite  disa pjesëve për me lehtësu editimin ma vonë
+    The whole theme e kom bo pak ma dark, se me bo shume purple po doket qe e u bo vibe code
+
+
+I know qe i kom bo pak llug files, nese sun i bjen n fije qa kom desht me bo please pytum :)

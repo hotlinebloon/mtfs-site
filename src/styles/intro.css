@@ -1,0 +1,222 @@
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at center, rgba(94, 215, 255, 0.12), transparent 34%),
+    linear-gradient(180deg, #2b003f, #15001f);
+  transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+.intro-overlay.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.intro-noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(rgba(94, 215, 255, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(94, 215, 255, 0.18) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.intro-content {
+  position: relative;
+  text-align: center;
+}
+
+.intro-content .brain-circuit-mark {
+  width: min(520px, 86vw);
+  margin: 0 auto;
+}
+
+.intro-content p {
+  margin: -16px 0 0;
+  color: var(--cyan);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+  animation-delay: 1.45s;
+}
+
+.brain-circuit-mark {
+  display: block;
+  overflow: visible;
+}
+
+.brain-outline,
+.brain-fold,
+.tech-outline,
+.trace,
+.orbit-path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.brain-outline {
+  stroke: var(--brain);
+  stroke-width: 11;
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1800;
+}
+
+.brain-fold {
+  stroke: var(--brain-dim);
+  stroke-width: 8;
+  stroke-dasharray: 340;
+  stroke-dashoffset: 340;
+}
+
+.tech-outline {
+  stroke: var(--cyan);
+  stroke-width: 8;
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1800;
+}
+
+.trace {
+  stroke: var(--cyan);
+  stroke-width: 7;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+}
+
+.chip {
+  fill: rgba(94, 215, 255, 0.14);
+  stroke: var(--cyan-bright);
+  stroke-width: 4;
+  opacity: 0;
+}
+
+.node {
+  fill: var(--cyan-bright);
+  opacity: 0;
+  filter: drop-shadow(0 0 10px rgba(94, 215, 255, 0.9));
+}
+
+.orbit-path {
+  stroke: rgba(94, 215, 255, 0.2);
+  stroke-width: 2;
+  stroke-dasharray: 7 14;
+  opacity: 0;
+}
+
+.orbit-ball {
+  fill: var(--cyan-bright);
+  opacity: 0;
+  filter:
+    drop-shadow(0 0 8px rgba(255, 255, 255, 0.95))
+    drop-shadow(0 0 22px rgba(94, 215, 255, 0.95));
+}
+
+.animated .brain-outline,
+.animated .brain-fold,
+.animated .tech-outline,
+.animated .trace {
+  animation: drawStroke 1s ease forwards;
+}
+
+.animated .tech-outline {
+  animation-delay: 0.25s;
+}
+
+.animated .brain-fold {
+  animation-duration: 0.65s;
+}
+
+.animated .chip {
+  animation: chipAppear 0.45s ease forwards;
+}
+
+.animated .node {
+  animation: nodePulse 0.65s ease forwards;
+}
+
+.animated .orbit-path {
+  animation: fadeIn 0.6s ease forwards;
+  animation-delay: 1.05s;
+}
+
+.animated .orbit-ball {
+  animation: fadeIn 0.4s ease forwards;
+  animation-delay: 1.15s;
+}
+
+.delay-1 {
+  animation-delay: 0.2s !important;
+}
+
+.delay-2 {
+  animation-delay: 0.38s !important;
+}
+
+.delay-3 {
+  animation-delay: 0.56s !important;
+}
+
+.delay-4 {
+  animation-delay: 0.74s !important;
+}
+
+.delay-5 {
+  animation-delay: 0.92s !important;
+}
+
+@keyframes drawStroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes chipAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes nodePulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.25);
+  }
+  72% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

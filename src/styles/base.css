@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 15% 0%, rgba(94, 215, 255, 0.12), transparent 26%),
+    radial-gradient(circle at 90% 12%, rgba(152, 69, 255, 0.18), transparent 30%),
+    linear-gradient(180deg, var(--bg), var(--bg-deep) 72%);
+  font-family:
+    "Space Grotesk",
+    "Inter",
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  opacity: 0.16;
+  background-image:
+    linear-gradient(rgba(94, 215, 255, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(94, 215, 255, 0.18) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(to bottom, black, transparent 78%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.page {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.kicker {
+  margin: 0 0 16px;
+  color: var(--cyan);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.button {
+  min-height: 48px;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-pill);
+  font-weight: 900;
+  transition: transform 0.22s ease, background 0.22s ease, border-color 0.22s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button.primary {
+  color: #061923;
+  background: var(--cyan);
+  box-shadow: 0 0 32px rgba(94, 215, 255, 0.26);
+}
+
+.button.secondary {
+  color: var(--text);
+  border: 1px solid var(--cyan-border);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.section-title-row {
+  width: min(var(--max), calc(100% - 32px));
+  margin: 0 auto 34px;
+}
+
+.section-title-row h2 {
+  margin: 0;
+  font-size: clamp(3rem, 7vw, 7.4rem);
+  line-height: 0.86;
+  letter-spacing: -0.09em;
+}
+
+.asset-note {
+  width: min(var(--max), calc(100% - 32px));
+  margin: 18px auto 0;
+  color: var(--faint);
+  font-size: 0.95rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

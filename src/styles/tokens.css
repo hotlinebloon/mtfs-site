@@ -1,0 +1,26 @@
+:root {
+  --bg: #0f0115;
+  --bg-deep: #120419;
+  --panel: #000000;
+  --panel-soft: rgba(255, 255, 255, 0.045);
+
+  --text: #fffafe;
+  --muted: rgba(255, 250, 254, 0.72);
+  --faint: rgba(255, 250, 254, 0.48);
+
+  --cyan: #5ed7ff;
+  --cyan-bright: #9cecff;
+  --cyan-soft: rgba(94, 215, 255, 0.16);
+  --cyan-border: rgba(94, 215, 255, 0.28);
+
+  --brain: #fff6ff;
+  --brain-dim: #d8cedc;
+
+  --border: rgba(255, 255, 255, 0.12);
+  --shadow: 0 28px 90px rgba(0, 0, 0, 0.35);
+
+  --max: 1180px;
+  --radius-xl: 34px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+}

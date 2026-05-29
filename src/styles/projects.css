@@ -1,0 +1,145 @@
+.projects-preview-grid {
+  width: min(1280px, calc(100% - 32px));
+  margin: 80px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+/* ================================
+   PROJECT CARD
+================================ */
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  min-height: 100px; /* ⬅️ slightly taller */
+
+  border-radius: 28px;
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  background: rgba(255, 255, 255, 0.04);
+
+  box-shadow:
+    0 22px 75px rgba(0, 0, 0, 0.3);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 38px 120px rgba(0, 0, 0, 0.45),
+    0 0 26px rgba(94, 215, 255, 0.12);
+}
+
+/* ================================
+   IMAGE SIDE (+100px impact)
+================================ */
+
+.project-card-image {
+  position: relative;
+  overflow: hidden;
+  min-height: 250px; /* ⬅️ +100px from before */
+}
+
+.project-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-card-image img {
+  transform: scale(1.06);
+}
+
+/* overlay */
+.project-card-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+/* ================================
+   CONTENT SIDE
+================================ */
+
+.project-card-content {
+  padding: 38px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.project-card-content p {
+  margin: 0;
+
+  color: #5ed7ff;
+
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.project-card-content h3 {
+  margin: 0;
+
+  font-size: 2.3rem;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+.project-card-content span {
+  margin-top: 10px;
+
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.95rem;
+}
+
+.project-card.reverse .project-card-image {
+  order: 2;
+}
+
+.project-card.reverse .project-card-content {
+  order: 1;
+}
+
+
+@media (max-width: 1000px) {
+  .projects-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .project-card-image {
+    min-height: 320px;
+  }
+
+  .project-card-content {
+    padding: 26px;
+  }
+
+  .project-card-content h3 {
+    font-size: 1.9rem;
+  }
+}
