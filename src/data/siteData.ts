@@ -127,7 +127,7 @@ export const projects: Project[] = [
     imageLabel: "first steps into tech",
     description:
       "An intensive web development course for girls focused on HTML, CSS, JavaScript, and website creation.",
-    image: "/projects/CTRL+HER.png",
+    image: asset("/projects/CTRL+HER.png"),
     imageMode: "logo",
     sections: [
       {
@@ -147,7 +147,7 @@ export const projects: Project[] = [
     imageLabel: "17-country reach",
     description:
       "A global learning network that connected girls from 17 countries through web development and peer collaboration.",
-    image: "/projects/CTRL+HER International.png",
+    image: asset("/projects/CTRL+HER International.png"),
     imageMode: "logo",
     sections: [
       {
@@ -167,7 +167,7 @@ export const projects: Project[] = [
     imageLabel: "safety mapping",
     description:
       "A community project connecting safety walks, mapping, and engineering-based problem solving.",
-    image: "/projects/STEM_for_Safety.png",
+    image: asset("/projects/STEM_for_Safety.png"),
     imageMode: "logo",
     sections: [
       {
@@ -196,7 +196,7 @@ export const projects: Project[] = [
     imageLabel: "young makers",
     description:
       "A future initiative for design thinking, engineering design, 3D printing, Python, and robotic components.",
-    image: "/projects/innotechx.png",
+    image: asset("/projects/innotechx.png"),
     imageMode: "logo",
     sections: [
       {
@@ -282,15 +282,15 @@ export const featureBlocks: FeatureBlock[] = [
 export const partners = [
   {
     name: "LinkPlus IT",
-    logo: "/sponsors/linkplus.png",
+    logo: asset("sponsors/linkplus.png"),
   },
   {
     name: "Hydroline LLC",
-    logo: "/sponsors/hydroline.png",
+    logo: asset("sponsors/hydroline.png"),
   },
   {
     name: "Miket",
-    logo: "/sponsors/miket.png",
+    logo: asset("sponsors/miket.png"),
   },
 ];
 
