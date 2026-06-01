@@ -1,10 +1,18 @@
 import { contact } from "../data/siteData";
 
+const logo = `${import.meta.env.BASE_URL}MTFS.png`;
+
+const socialLinks = {
+  instagram: "https://www.instagram.com/YOUR_INSTAGRAM_HANDLE/",
+  linkedin: "https://www.linkedin.com/company/YOUR_LINKEDIN_PAGE/",
+  facebook: "#",
+};
+
 export default function Footer() {
   return (
     <footer className="footer" id="contact">
       <div className="footer-brand">
-        <img src="/MTFS.png" alt="MTFS logo" />
+        <img src={logo} alt="MTFS logo" />
 
         <div>
           <strong>Mapping the Future with STEM</strong>
@@ -13,15 +21,30 @@ export default function Footer() {
       </div>
 
       <div className="footer-links" aria-label="Social links">
-        <a href="#" aria-label="Instagram">
+        <a
+          href={socialLinks.instagram}
+          aria-label="Instagram"
+          target="_blank"
+          rel="noreferrer"
+        >
           <InstagramIcon />
         </a>
 
-        <a href="#" aria-label="LinkedIn">
+        <a
+          href={socialLinks.linkedin}
+          aria-label="LinkedIn"
+          target="_blank"
+          rel="noreferrer"
+        >
           <LinkedInIcon />
         </a>
 
-        <a href="#" aria-label="Facebook">
+        <a
+          href={socialLinks.facebook}
+          aria-label="Facebook"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FacebookIcon />
         </a>
 
