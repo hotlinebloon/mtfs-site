@@ -1,29 +1,51 @@
-import { contact } from "../data/siteData";
+const joinPaths = [
+  {
+    title: "Volunteer",
+    description: "Help run sessions, projects, and events.",
+  },
+  {
+    title: "Mentor",
+    description: "Guide students through technical or creative work.",
+  },
+  {
+    title: "Partner",
+    description: "Bring MTFS to a school, NGO, company, or youth space.",
+  },
+];
 
 export default function JoinUs() {
   return (
-    <section className="join-section" id="join">
+    <section className="home-section join-section" id="join">
       <div className="join-editorial">
-        <p className="kicker">Contact</p>
-        <h2>Be part of the next generation shaping STEM.</h2>
+        <p className="kicker">Join MTFS</p>
+
+        <h2>Help more students find a serious place to start.</h2>
 
         <p>
-            Whether you want to volunteer, join a project, support a workshop, or
-            partner with us, MTFS is open to students, mentors, schools, and
-            organizations that believe in hands-on STEM learning.
+          Volunteer with a project, mentor a team, support a workshop, or help
+          bring MTFS to more schools and communities.
         </p>
 
-        <div className="contact-details">
-          <a href={`mailto:${contact.email}`}>{contact.email}</a>
-          <a href={`tel:${contact.phone}`}>{contact.phone}</a>
+        <div className="join-paths">
+          {joinPaths.map((path) => (
+            <article key={path.title}>
+              <h3>{path.title}</h3>
+              <p>{path.description}</p>
+            </article>
+          ))}
         </div>
 
         <div className="join-actions">
-          <a href={`mailto:${contact.email}`} className="button primary">
-            Email us
-          </a>
-          <a href="/projects" className="button secondary">
-            View projects
+          <p className="join-contact-note">
+            Email mappingthefuturewithstem@gmail.com to volunteer, mentor, or
+            start a partnership conversation.
+          </p>
+
+          <a
+            href="mailto:mappingthefuturewithstem@gmail.com"
+            className="button primary on-dark"
+          >
+            Join as a volunteer
           </a>
         </div>
       </div>

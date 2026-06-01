@@ -1,33 +1,48 @@
 import { Link } from "react-router-dom";
-import "../styles/hero.css";
 
 export default function Hero() {
   return (
     <section className="hero" id="home">
-      <div className="hero-background-lines" />
-      <div className="hero-layout">
-        <div className="hero-copy">
-          <p className="kicker">
-            Non-profit organization based in Kosovo
-          </p>
+      <div className="hero-bubble">
+        <div className="hero-rules" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+        </div>
 
-          <h1>
-            MAPPING THE <span className="future">FUTURE</span> WITH STEM.
-          </h1>
+        <div className="hero-layout">
 
-          <p>
-            The Mapping the Future with STEM team aims to expand access to
-            STEM and innovation by creating opportunities for youth.
-          </p>
 
-          <div className="hero-actions">
-            <Link to="/projects" className="button primary">
-              View projects
-            </Link>
+          <div className="hero-card">
+            
+            <span className="hero-logo-mark">
+              <img src="/MTFS_nobackground.png" alt="" />
+            </span>
 
-            <Link to="/staff" className="button secondary">
-              Meet the team
-            </Link>
+            <p className="hero-kicker">Youth-led STEM NGO</p>
+
+            <h1>
+              <span>Mapping the Future</span>
+              <span>with STEM</span>
+            </h1>
+
+            <p className="hero-subheadline">Students learning by building.</p>
+
+            <p className="hero-lead">
+              MTFS creates serious starting points for coding, AI, robotics,
+              mentorship, workshops, and community work. We help students build
+              real confidence through projects they can share and improve.
+            </p>
+
+            <div className="hero-actions">
+              <a className="hero-primary" href="#join">
+                <span>Join as a volunteer</span>
+              </a>
+
+              <Link className="hero-secondary" to="/projects">
+                Explore projects
+              </Link>
+            </div>
           </div>
         </div>
       </div>

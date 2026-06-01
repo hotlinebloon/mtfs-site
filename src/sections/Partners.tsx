@@ -1,19 +1,46 @@
-import { partners } from "../data/siteData";
+const sponsorLogos = [
+  {
+    name: "LinkPlus IT",
+    logo: "/sponsors/linkplus.png",
+    type: "Technology partner",
+  },
+  {
+    name: "Hydroline LLC",
+    logo: "/sponsors/hydroline.png",
+    type: "Community supporter",
+  },
+  {
+    name: "Miket",
+    logo: "/sponsors/miket.png",
+    type: "Program supporter",
+  },
+];
 
 export default function Partners() {
   return (
-    <section className="partners-section" id="partners">
-      <div className="partners-header">
-        <p className="kicker">Partnerships</p>
-        <h2>Organizations connected to our work</h2>
-      </div>
+    <section className="home-section partners-section" id="partners">
+      <div className="partners-layout">
+        <div className="section-heading">
+          <p className="kicker">Partners</p>
+          <h2>Supported by organizations that make the work possible.</h2>
+          <p>
+            Partner support helps MTFS run learning spaces, workshops, and
+            project work for more students and communities.
+          </p>
+        </div>
 
-      <div className="partner-slider" aria-label="Partner logos">
-        <div className="partner-track">
-          {[...partners, ...partners].map((partner, index) => (
-            <div className="partner-logo" key={`${partner.name}-${index}`}>
-              <img src={partner.logo} alt={partner.name} />
-            </div>
+        <div className="partner-logo-grid" aria-label="MTFS sponsors">
+          {sponsorLogos.map((sponsor) => (
+            <article className="partner-logo-card" key={sponsor.name}>
+              <div className="partner-logo-frame">
+                <img src={sponsor.logo} alt={`${sponsor.name} logo`} />
+              </div>
+
+              <div className="partner-card-copy">
+                <h3>{sponsor.name}</h3>
+                <p>{sponsor.type}</p>
+              </div>
+            </article>
           ))}
         </div>
       </div>

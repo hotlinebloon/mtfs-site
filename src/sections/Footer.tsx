@@ -5,27 +5,30 @@ export default function Footer() {
     <footer className="footer" id="contact">
       <div className="footer-brand">
         <img src="/MTFS.png" alt="MTFS logo" />
-        <strong>Mapping the Future with STEM</strong>
+
+        <div>
+          <strong>Mapping the Future with STEM</strong>
+          <p>© 2026 Mapping the Future with STEM. All rights reserved.</p>
+        </div>
       </div>
 
       <div className="footer-links" aria-label="Social links">
         <a href="#" aria-label="Instagram">
           <InstagramIcon />
         </a>
+
         <a href="#" aria-label="LinkedIn">
           <LinkedInIcon />
         </a>
+
         <a href="#" aria-label="Facebook">
           <FacebookIcon />
         </a>
+
         <a href={`mailto:${contact.email}`} aria-label="Email">
           <EmailIcon />
         </a>
       </div>
-
-      <p className="copyright">
-        © 2026 Mapping the Future with STEM. All rights reserved.
-      </p>
     </footer>
   );
 }

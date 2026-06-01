@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-01T10:25:56+02:00",
+  "title": "Design System: Mapping the Future with STEM",
+  "extensions": {
+    "colorMeta": {
+      "deep-civic-purple": {
+        "role": "primary",
+        "displayName": "Deep Civic Purple",
+        "canonical": "#2b0339",
+        "tonalRamp": [
+          "oklch(15% 0.07 315)",
+          "oklch(24% 0.09 315)",
+          "oklch(33% 0.1 315)",
+          "oklch(43% 0.1 315)",
+          "oklch(55% 0.09 315)",
+          "oklch(68% 0.07 315)",
+          "oklch(82% 0.045 315)",
+          "oklch(94% 0.02 315)"
+        ]
+      },
+      "purple-panel": {
+        "role": "primary",
+        "displayName": "Purple Panel",
+        "canonical": "#360746",
+        "tonalRamp": [
+          "oklch(16% 0.07 315)",
+          "oklch(25% 0.09 315)",
+          "oklch(34% 0.1 315)",
+          "oklch(44% 0.1 315)",
+          "oklch(56% 0.09 315)",
+          "oklch(69% 0.07 315)",
+          "oklch(83% 0.045 315)",
+          "oklch(95% 0.02 315)"
+        ]
+      },
+      "lab-cyan": {
+        "role": "secondary",
+        "displayName": "Lab Cyan",
+        "canonical": "#5ec9f0",
+        "tonalRamp": [
+          "oklch(18% 0.07 225)",
+          "oklch(30% 0.09 225)",
+          "oklch(42% 0.11 225)",
+          "oklch(55% 0.12 225)",
+          "oklch(68% 0.115 225)",
+          "oklch(78% 0.09 225)",
+          "oklch(88% 0.055 225)",
+          "oklch(96% 0.025 225)"
+        ]
+      },
+      "warm-white": {
+        "role": "neutral",
+        "displayName": "Warm White",
+        "canonical": "#fffefa",
+        "tonalRamp": [
+          "#201f1d",
+          "#3a3935",
+          "#55534e",
+          "#76736b",
+          "#9a968c",
+          "#c5c0b3",
+          "#e7e1d4",
+          "#fffefa"
+        ]
+      },
+      "deep-ink": {
+        "role": "neutral",
+        "displayName": "Deep Ink",
+        "canonical": "#09060b",
+        "tonalRamp": [
+          "#09060b",
+          "#201827",
+          "#392b44",
+          "#554466",
+          "#756083",
+          "#9984a3",
+          "#c1afc8",
+          "#eee4f2"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero and route-level brand headlines only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Major homepage sections and large brand statements."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Cards, project names, staff names, and focused content blocks."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Readable explanations grounded in real MTFS work."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Short metadata, nav support text, and compact section labels."
+      }
+    },
+    "shadows": [
+      {
+        "name": "hero-hard-shelf",
+        "value": "0 10px 0 rgba(0, 0, 0, 0.08)",
+        "purpose": "Only for the hero inner text card or a similarly deliberate brand object."
+      },
+      {
+        "name": "sticky-nav-ambient",
+        "value": "0 18px 46px rgba(0, 0, 0, 0.24)",
+        "purpose": "Only for fixed navigation after it separates from the hero."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Default easing for button, card, and nav state transitions."
+      },
+      {
+        "name": "state-transition",
+        "value": "180ms to 260ms",
+        "purpose": "Fast, purposeful transitions for hover, focus, and navigation state."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "nav-collapse",
+        "value": "980px"
+      },
+      {
+        "name": "mobile",
+        "value": "620px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Pill Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Confident action button for join and project routes.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Join as a volunteer<span aria-hidden=\"true\">→</span></a>",
+      "css": ".ds-btn-primary { min-height: 52px; padding: 0 8px 0 24px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: 0; border-radius: 999px; background: #2b0339; color: #5ec9f0; font: 850 0.95rem/1 'DM Sans', system-ui, sans-serif; text-decoration: none; transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), background 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-primary span { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 999px; background: rgba(94, 201, 240, 0.14); } .ds-btn-primary:hover { transform: translateY(-2px); background: #09060b; } .ds-btn-primary:focus-visible { outline: 3px solid #5ec9f0; outline-offset: 3px; }"
+    },
+    {
+      "name": "Secondary Pill Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Supporting action for secondary routes.",
+      "html": "<a class=\"ds-btn-secondary\" href=\"#\">Explore projects</a>",
+      "css": ".ds-btn-secondary { min-height: 52px; padding: 0 23px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(94, 201, 240, 0.34); border-radius: 999px; background: transparent; color: #5ec9f0; font: 850 0.95rem/1 'DM Sans', system-ui, sans-serif; text-decoration: none; transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), background 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-secondary:hover { transform: translateY(-2px); background: rgba(94, 201, 240, 0.08); } .ds-btn-secondary:focus-visible { outline: 3px solid #5ec9f0; outline-offset: 3px; }"
+    },
+    {
+      "name": "Project Surface",
+      "kind": "card",
+      "refersTo": "project-card",
+      "description": "Framed dark project surface for previews and archive entries.",
+      "html": "<article class=\"ds-project-card\"><div class=\"ds-project-card__visual\">01</div><div class=\"ds-project-card__copy\"><p>Active project</p><h3>CTRL+Her</h3><span>Web development programs for girls, built around practice and confidence.</span></div></article>",
+      "css": ".ds-project-card { overflow: hidden; display: grid; grid-template-columns: minmax(160px, 0.52fr) minmax(0, 1fr); min-height: 290px; border: 1px solid rgba(94, 201, 240, 0.18); border-radius: 16px; background: rgba(255, 254, 250, 0.04); color: #fffefa; } .ds-project-card__visual { min-height: 260px; display: grid; place-items: start; padding: 22px; background: #360746; color: rgba(255, 254, 250, 0.18); font: 900 clamp(3rem, 5vw, 5.2rem)/1 Archivo, system-ui, sans-serif; } .ds-project-card__copy { padding: clamp(30px, 5vw, 56px); display: flex; flex-direction: column; justify-content: center; } .ds-project-card__copy p { margin: 0 0 18px; color: #5ec9f0; font: 850 0.95rem/1.2 'DM Sans', system-ui, sans-serif; } .ds-project-card__copy h3 { margin: 0 0 22px; color: #fffefa; font: 900 clamp(2rem, 4vw, 4.2rem)/0.98 Archivo, system-ui, sans-serif; letter-spacing: -0.035em; } .ds-project-card__copy span { color: rgba(255, 254, 250, 0.76); font: 400 1rem/1.72 'DM Sans', system-ui, sans-serif; }"
+    },
+    {
+      "name": "Navigation Pill",
+      "kind": "nav",
+      "refersTo": "nav-pill",
+      "description": "Fixed brand navigation with compact route links and volunteer action.",
+      "html": "<header class=\"ds-nav\"><div class=\"ds-nav__brand\"><span class=\"ds-nav__mark\">MT</span><span><strong>MTFS</strong><small>Mapping the Future with STEM</small></span></div><nav><a href=\"#\">Home</a><a href=\"#\">Projects</a><a href=\"#\">Staff</a></nav><a class=\"ds-nav__action\" href=\"#\">Volunteer</a></header>",
+      "css": ".ds-nav { min-height: 70px; padding: 8px 14px 8px 18px; display: flex; align-items: center; justify-content: space-between; gap: 22px; border: 1px solid rgba(94, 201, 240, 0.24); border-radius: 999px; background: rgba(43, 3, 57, 0.94); color: #5ec9f0; font-family: 'DM Sans', system-ui, sans-serif; box-shadow: 0 18px 46px rgba(0, 0, 0, 0.24); } .ds-nav__brand { display: inline-flex; align-items: center; gap: 12px; } .ds-nav__mark { width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid rgba(94, 201, 240, 0.24); border-radius: 999px; background: rgba(255, 254, 250, 0.08); font-weight: 900; } .ds-nav strong, .ds-nav small { display: block; line-height: 1; } .ds-nav strong { font-size: 1rem; font-weight: 900; } .ds-nav small { margin-top: 3px; opacity: 0.72; font-size: 0.78rem; font-weight: 800; } .ds-nav nav { display: flex; gap: 2px; } .ds-nav a { min-height: 42px; padding: 0 15px; display: inline-flex; align-items: center; border-radius: 999px; color: inherit; text-decoration: none; font-size: 0.88rem; font-weight: 850; } .ds-nav a:hover { background: rgba(94, 201, 240, 0.08); } .ds-nav__action { background: #5ec9f0; color: #2b0339 !important; padding: 0 18px !important; }"
+    },
+    {
+      "name": "Join Path Card",
+      "kind": "card",
+      "refersTo": "join-path",
+      "description": "Small invitation surface for volunteer, mentor, and partner paths.",
+      "html": "<article class=\"ds-join-path\"><h3>Volunteer</h3><p>Help run sessions, projects, and events.</p><span aria-hidden=\"true\">→</span></article>",
+      "css": ".ds-join-path { position: relative; min-height: 160px; padding: 24px; border: 1px solid rgba(94, 201, 240, 0.18); border-radius: 12px; background: rgba(255, 254, 250, 0.04); color: #fffefa; } .ds-join-path h3 { margin: 0 0 14px; color: #fffefa; font: 900 1.35rem/1.04 Archivo, system-ui, sans-serif; letter-spacing: -0.02em; } .ds-join-path p { margin: 0; color: rgba(255, 254, 250, 0.76); font: 400 1rem/1.72 'DM Sans', system-ui, sans-serif; } .ds-join-path span { position: absolute; right: 18px; bottom: 18px; color: #5ec9f0; font-weight: 900; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Serious Youth Lab",
+    "overview": "This system should feel like a focused youth-led STEM organization with real projects, real people, and a clear invitation to join. It is professional, clean, capable, welcoming, and community-built. The visual language should give new visitors confidence that MTFS is serious about its work while still making students, volunteers, partners, and sponsors feel that they can become part of the family.",
+    "keyCharacteristics": [
+      "Purple-dominant brand surface with cyan used sparingly for action, focus, and structure.",
+      "Strong display typography with short, grounded copy.",
+      "Mostly flat depth: borders, tonal panels, and rare hard shadows.",
+      "Homepage as brand orientation, not a full archive.",
+      "Project detail belongs on the Projects page."
+    ],
+    "rules": [
+      {
+        "name": "The Purple Field Rule",
+        "body": "The hero is purple-dominant. The hero bubble takes the full available space, and the inner text card is the only capped element.",
+        "section": "colors"
+      },
+      {
+        "name": "The Cyan Signal Rule",
+        "body": "Lab Cyan is for action, focus, structural rules, and selected emphasis. Do not spread cyan across inactive decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The No White Pricing Layout Rule",
+        "body": "The Join section should stay dark purple and brand-led. Do not turn it into a white pricing-card layout.",
+        "section": "colors"
+      },
+      {
+        "name": "The Grounded Copy Rule",
+        "body": "Every homepage and page sentence must be based on MTFS programs, people, outcomes, or invitations. Do not write random startup claims.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Shouting Rule",
+        "body": "Display type is strong, but not oversized. Keep hero headlines at or below 6rem and letter spacing no tighter than -0.04em in new work.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Structure Rule",
+        "body": "Use borders and tonal panels first. Soft wide card shadows are forbidden unless there is a clear state or navigation reason.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the hero purple-dominant, with the hero bubble taking full available space and the inner text card as the only capped element.",
+      "Do keep the homepage neat and selective. It introduces MTFS and routes people to project detail.",
+      "Do put full project details on the Projects page.",
+      "Do use Deep Civic Purple, Lab Cyan, Warm White, and Deep Ink as the core brand vocabulary.",
+      "Do use confident pill actions, clean framed project surfaces, strong typography, and purposeful spacing.",
+      "Do write copy from actual MTFS programs, people, outcomes, and invitations.",
+      "Do preserve visible focus states, readable contrast, and reduced-motion support."
+    ],
+    "donts": [
+      "Don't make the site feel like a generic tech startup.",
+      "Don't make it feel like a childish school club or a stiff corporate NGO.",
+      "Don't use vague innovation copy, inflated metrics, decorative gradients, startup buzzwords, or random homepage content.",
+      "Don't add a hero photo.",
+      "Don't add a side logo block in the hero.",
+      "Don't turn the homepage into a full archive.",
+      "Don't turn the Join section into a white pricing-card layout.",
+      "Don't use soft generic SaaS shadows everywhere.",
+      "Don't add random decorative sections that do not explain MTFS work.",
+      "Don't repeat tiny uppercase section labels as the whole page structure unless a specific label earns its place."
+    ]
+  }
+}
