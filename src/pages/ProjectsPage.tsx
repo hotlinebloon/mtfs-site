@@ -1,8 +1,10 @@
 import Footer from "../sections/Footer";
 import { projects } from "../data/siteData";
 
+const fallbackImage = `${import.meta.env.BASE_URL}MTFS.png`;
+
 function handleImageError(event: React.SyntheticEvent<HTMLImageElement>) {
-  event.currentTarget.src = "/MTFS.png";
+  event.currentTarget.src = fallbackImage;
 }
 
 export default function ProjectsPage() {
@@ -31,12 +33,11 @@ export default function ProjectsPage() {
 
                 <div className="project-file-image">
                   <img
-                    src={project.image || "/MTFS.png"}
+                    src={project.image || fallbackImage}
                     alt=""
                     onError={handleImageError}
                   />
                 </div>
-
               </div>
 
               <div className="project-file-content">

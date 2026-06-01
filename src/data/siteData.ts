@@ -1,4 +1,5 @@
-const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+const asset = (path: string) =>
+  `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
 
 export type StaffMember = {
   name: string;
