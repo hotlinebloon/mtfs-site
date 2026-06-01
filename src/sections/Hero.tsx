@@ -14,9 +14,9 @@ export default function Hero() {
 
 
           <div className="hero-card">
-            
+
             <span className="hero-logo-mark">
-              <img src="/MTFS_nobackground.png" alt="" />
+              <img src={`${import.meta.env.BASE_URL}MTFS_nobackground.png`} alt="" />
             </span>
 
             <p className="hero-kicker">Youth-led STEM NGO</p>

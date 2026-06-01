@@ -1,17 +1,19 @@
+const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+
 const sponsorLogos = [
   {
     name: "LinkPlus IT",
-    logo: "/sponsors/linkplus.png",
+    logo: asset("sponsors/linkplus.png"),
     type: "Technology partner",
   },
   {
     name: "Hydroline LLC",
-    logo: "/sponsors/hydroline.png",
+    logo: asset("sponsors/hydroline.png"),
     type: "Community supporter",
   },
   {
     name: "Miket",
-    logo: "/sponsors/miket.png",
+    logo: asset("sponsors/miket.png"),
     type: "Program supporter",
   },
 ];

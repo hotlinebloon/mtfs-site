@@ -1,3 +1,5 @@
+const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+
 export type StaffMember = {
   name: string;
   role: string;
@@ -56,7 +58,7 @@ export const staff: StaffMember[] = [
     role: "Founder",
     bio: "Founder and CEO of Mapping the Future with STEM.",
     initials: "EI",
-    photo: "/staff/edesa.png",
+    photo: asset("/staff/edesa.png"),
     linkedin: "#",
     website: "#",
   },
@@ -65,7 +67,7 @@ export const staff: StaffMember[] = [
     role: "Project Coordinator",
     bio: "Coordinates timelines, technical direction, and smooth project execution.",
     initials: "GK",
-    photo: "/staff/gerti.png",
+    photo: asset("/staff/gerti.png"),
     linkedin: "#",
     website: "#",
   },
@@ -74,7 +76,7 @@ export const staff: StaffMember[] = [
     role: "Project Coordinator",
     bio: "Drives project strategy, communication, and team coordination.",
     initials: "VG",
-    photo: "/staff/vesa.png",
+    photo: asset("/staff/vesa.png"),
     linkedin: "#",
     website: "#",
   },
@@ -83,7 +85,7 @@ export const staff: StaffMember[] = [
     role: "Project Assistant",
     bio: "Supports planning, coordination, and team operations.",
     initials: "EB",
-    photo: "/staff/enea.png",
+    photo: asset("/staff/enea.png"),
     linkedin: "#",
     website: "#",
   },
@@ -92,7 +94,7 @@ export const staff: StaffMember[] = [
     role: "Project Assistant",
     bio: "Supports scheduling, coordination, and project organization.",
     initials: "AT",
-    photo: "/staff/altina.png",
+    photo: asset("/staff/altina.png"),
     linkedin: "#",
     website: "#",
   },
