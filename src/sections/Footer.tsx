@@ -3,8 +3,8 @@ import { contact } from "../data/siteData";
 const logo = `${import.meta.env.BASE_URL}MTFS.png`;
 
 const socialLinks = {
-  instagram: "https://www.instagram.com/YOUR_INSTAGRAM_HANDLE/",
-  linkedin: "https://www.linkedin.com/company/YOUR_LINKEDIN_PAGE/",
+  instagram: "https://www.instagram.com/mappingthefuturewithstem/",
+  linkedin: "https://www.linkedin.com/company/mapping-the-future-with-stem/posts/?feedView=all",
   facebook: "#",
 };
 
