@@ -31,9 +31,16 @@ export default function Navbar() {
 
   return (
     <header className={`navbar ${isOnPurple ? "is-on-purple" : "is-on-hero"}`}>
-      <Link to="/" className="brand" aria-label="Mapping the Future with STEM home">
+      <Link
+        to="/"
+        className="brand"
+        aria-label="Mapping the Future with STEM home"
+      >
         <span className="brand-mark">
-          <img src="/MTFS_nobackground.png" alt="" />
+          <img
+            src={`${import.meta.env.BASE_URL}MTFS_nobackground.png`}
+            alt=""
+          />
         </span>
 
         <span className="brand-copy">
@@ -44,15 +51,15 @@ export default function Navbar() {
 
       <nav className="nav-links" aria-label="Main navigation">
         <Link to="/">Home</Link>
-        <a href="/#about">Mission</a>
-        <a href="/projects">Projects</a>
+        <a href={`${import.meta.env.BASE_URL}#about`}>Mission</a>
+        <Link to="/projects">Projects</Link>
         <Link to="/staff">Staff</Link>
-        <a href="/#partners">Partners</a>
-        <a href="/#join">Contact</a>
+        <a href={`${import.meta.env.BASE_URL}#partners`}>Partners</a>
+        <a href={`${import.meta.env.BASE_URL}#join`}>Contact</a>
       </nav>
 
       <div className="nav-actions">
-        <a href="/#join" className="nav-button">
+        <a href={`${import.meta.env.BASE_URL}#join`} className="nav-button">
           Volunteer
         </a>
       </div>
