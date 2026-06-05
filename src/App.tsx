@@ -11,11 +11,11 @@ export default function App() {
   const location = useLocation();
 
   useEffect(() => {
-    const reduceMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
+    const disableRevealMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce), (max-width: 1024px)",
     ).matches;
 
-    if (reduceMotion) {
+    if (disableRevealMotion) {
       return;
     }
 
