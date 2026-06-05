@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isOnPurple, setIsOnPurple] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const updateNavbarTheme = () => {
@@ -29,12 +30,17 @@ export default function Navbar() {
     };
   }, []);
 
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
-    <header className={`navbar ${isOnPurple ? "is-on-purple" : "is-on-hero"}`}>
+    <header
+      className={`navbar ${isOnPurple ? "is-on-purple" : "is-on-hero"} ${isMenuOpen ? "is-menu-open" : ""}`}
+    >
       <Link
         to="/"
         className="brand"
         aria-label="Mapping the Future with STEM home"
+        onClick={closeMenu}
       >
         <span className="brand-mark">
           <img
@@ -49,17 +55,52 @@ export default function Navbar() {
         </span>
       </Link>
 
-      <nav className="nav-links" aria-label="Main navigation">
-        <Link to="/">Home</Link>
-        <a href={`${import.meta.env.BASE_URL}#about`}>Mission</a>
-        <Link to="/projects">Projects</Link>
-        <Link to="/staff">Staff</Link>
-        <a href={`${import.meta.env.BASE_URL}#partners`}>Partners</a>
-        <a href={`${import.meta.env.BASE_URL}#join`}>Contact</a>
+      <button
+        className="nav-toggle"
+        type="button"
+        aria-expanded={isMenuOpen}
+        aria-controls="main-navigation"
+        aria-label={
+          isMenuOpen ? "Close navigation menu" : "Open navigation menu"
+        }
+        onClick={() => setIsMenuOpen((open) => !open)}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+
+      <nav
+        className="nav-links"
+        id="main-navigation"
+        aria-label="Main navigation"
+      >
+        <Link to="/" onClick={closeMenu}>
+          Home
+        </Link>
+        <a href={`${import.meta.env.BASE_URL}#about`} onClick={closeMenu}>
+          Mission
+        </a>
+        <Link to="/projects" onClick={closeMenu}>
+          Projects
+        </Link>
+        <Link to="/staff" onClick={closeMenu}>
+          Staff
+        </Link>
+        <a href={`${import.meta.env.BASE_URL}#partners`} onClick={closeMenu}>
+          Partners
+        </a>
+        <a href={`${import.meta.env.BASE_URL}#join`} onClick={closeMenu}>
+          Contact
+        </a>
       </nav>
 
       <div className="nav-actions">
-        <a href={`${import.meta.env.BASE_URL}#join`} className="nav-button">
+        <a
+          href={`${import.meta.env.BASE_URL}#join`}
+          className="nav-button"
+          onClick={closeMenu}
+        >
           Volunteer
         </a>
       </div>

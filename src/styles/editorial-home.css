@@ -406,7 +406,8 @@
 .join-paths article {
   position: relative;
   min-height: 0;
-  padding: clamp(24px, 3.6vw, 38px) clamp(42px, 5vw, 72px) clamp(24px, 3.6vw, 38px) 0;
+  padding: clamp(24px, 3.6vw, 38px) clamp(42px, 5vw, 72px)
+    clamp(24px, 3.6vw, 38px) 0;
   display: grid;
   grid-template-columns: minmax(130px, 0.36fr) minmax(0, 1fr);
   gap: clamp(18px, 3vw, 34px);
@@ -466,7 +467,6 @@
 .join-actions .button {
   min-height: 56px;
 }
-
 
 /* Partners */
 

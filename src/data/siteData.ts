@@ -113,7 +113,7 @@ export const staff: StaffMember[] = [
     role: "Graphic Designer",
     bio: "Designs visual materials for branding, campaigns, and project communication.",
     initials: "EB",
-    photo: "",
+    photo: asset("/staff/elira.png"),
     linkedin: "#",
     website: "#",
   },

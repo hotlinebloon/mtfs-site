@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import "./App.css";
 
@@ -8,6 +8,8 @@ import ProjectsPage from "./pages/ProjectsPage";
 import StaffPage from "./pages/StaffPage";
 
 export default function App() {
+  const location = useLocation();
+
   useEffect(() => {
     const reduceMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
@@ -19,11 +21,13 @@ export default function App() {
 
     const motionGroups = [
       {
-        selector: ".mission-grid article, .project-name-grid article, .join-paths article",
+        selector:
+          ".mission-grid article, .project-name-grid article, .join-paths article",
         variant: "line",
       },
       {
-        selector: ".focus-list article, .partner-logo-card, .coordinator-grid article, .staff-grid article",
+        selector:
+          ".focus-list article, .partner-logo-card, .coordinator-grid article, .staff-grid article",
         variant: "tile",
       },
       {
@@ -31,7 +35,8 @@ export default function App() {
         variant: "file",
       },
       {
-        selector: ".home-section .section-heading, .team-layer-heading, .projects-hero, .staff-hero",
+        selector:
+          ".home-section .section-heading, .team-layer-heading, .projects-hero, .staff-hero",
         variant: "field",
       },
       {
@@ -78,7 +83,7 @@ export default function App() {
         item.style.removeProperty("--motion-index");
       });
     };
-  }, []);
+  }, [location.pathname]);
 
   return (
     <div className="page">

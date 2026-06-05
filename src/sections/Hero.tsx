@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
+import HeroBackgroundPaths from "../components/HeroBackgroundPaths";
 
 export default function Hero() {
   return (
     <section className="hero" id="home">
       <div className="hero-bubble">
+        <HeroBackgroundPaths />
+
         <div className="hero-rules" aria-hidden="true">
           <span />
           <span />
@@ -11,12 +14,12 @@ export default function Hero() {
         </div>
 
         <div className="hero-layout">
-
-
           <div className="hero-card">
-
             <span className="hero-logo-mark">
-              <img src={`${import.meta.env.BASE_URL}MTFS_nobackground.png`} alt="" />
+              <img
+                src={`${import.meta.env.BASE_URL}MTFS_nobackground.png`}
+                alt=""
+              />
             </span>
 
             <p className="hero-kicker">Youth-led STEM NGO</p>
